@@ -1,32 +1,35 @@
 import React from 'react';
-import { StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View, Button} from 'react-native';
 
 const semesters = () => {
-	const Sem3 = "3rd semester"
-	const Sem4 = "4th semester"
-	const Sem5 = "5th semester"
-	const Sem6 = "6th semester"
-
 
 	return(
-		<View>
-			<Text style = {styles.s_container}>
-				{Sem3}
-				{Sem4}
-				{Sem5}
-				{Sem6}
-			</Text>
+		<View style = {styles.viewStyle}>
+			<Text style = {styles.s_container}> List of Semesters</Text>
+			<View style = {{margin:5}}><Button title= "3rd semester"/></View>
+			<View style = {{margin:5}}><Button title= "4th semester"/></View>
+
+			<View style = {{margin:5}}><Button style = {{color: "Yellow"}} title= "5th semester"/></View>
+			<View style = {{margin:5}}><Button title= "6th semester"/></View>
 		</View>
+
 	)
 }
 
 const styles = StyleSheet.create(
 	{
-		c_container: {
-			backgroundColor: '#fff',
+		s_container: {
 			fontSize: 30,
-			color: "black"
+			color: "black",
+			marginBottom: 15
 		},
+		viewStyle: {
+
+			margin: 20,
+
+			alignItems: 'center',
+    		justifyContent: 'center',
+		}
 	}
 );
 

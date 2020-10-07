@@ -12,12 +12,12 @@ const courses = () => {
 	return(
 		<View>
 			<Text style = {styles.c_container}>
-					1. {Course1}
-					2. {Course2}
-					3. {Course3}
-					4. {Course4}
-					5. {Course5}
-					6. {Course6}
+				1. {Course1}
+				2. {Course2}
+				3. {Course3}
+				4. {Course4}
+				5. {Course5}
+				6. {Course6}
 			</Text>
 		</View>
 	)
