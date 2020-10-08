@@ -1,34 +1,54 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, Image } from 'react-native';
 
+
+
 const HomeScreen = (props) =>{
 	return(
-		<View style = {styles.viewStyle}>
-			<Image
+		<View style = {{backgroundColor: "#efeeee"}}>
+
+
+			<View style = {styles.viewStyle}>
+				<Image
 				source={{uri: "https://upload.wikimedia.org/wikipedia/en/d/d0/Islamic_University_of_Technology_%28coat_of_arms%29.png"}}
-				style={{width: 248, height: 406}}
-			/>
+				style={{width: 213, height: 356, marginTop:10}}
+				/>
 
-			<Text style = {styles.textStyle}>Department of CSE</Text>
-			<Text style ={{fontSize: 20, color: "black", margin: 10}} >Program : SWE</Text>
+				<Text style = {styles.textStyle}>Department of CSE</Text>
+				<Text style ={{fontSize: 20, color: "#344e5c", margin: 15}} >Program : SWE</Text>
+				<View style={{marginBottom:10}}>
+					<Button
+					title = "Profile"
+					onPress = {
+						function (){
+							props.navigation.navigate("Profile");
+						}
+					}
+					/>
+				</View>
+			</View>
 
-			<Button
-			title = "Semester wise Course list"
-			onPress = {
-				function (){
-					props.navigation.navigate("Semesters");
+			<View style={{marginBottom:10}}>
+				<Button color= "#e17147"
+				title = "Semester wise Course list"
+				onPress = {
+					function (){
+						props.navigation.navigate("Semesters");
+					}
 				}
-			}
-			/>
-
-			<Button
-			title = "List of Faculty members"
-			onPress = {
-				function (){
-					props.navigation.navigate("Faculties");
+				/>
+			</View>
+			<View style={{marginBottom:30, justifyContent: 'space-between'}}>
+				<Button color= "#e17147"
+				title = "List of Faculty members"
+				onPress = {
+					function (){
+						props.navigation.navigate("Faculties");
+					}
 				}
-			}
-			/>
+				/>
+			</View>
+
 		</View>
 	)
 }
@@ -36,15 +56,13 @@ const HomeScreen = (props) =>{
 const styles = StyleSheet.create(
 	{
 		textStyle: {
-    		backgroundColor: '#fff',
+    		marginTop: 10,
 			fontSize: 30,
-			color: "purple",
+			color: "#344e5c",
 
 		},
 		viewStyle: {
-			backgroundColor: "#fff",
-			borderWidth: 20,
-			borderColor: "#fff",
+			margin:10,
 			alignItems: 'center',
     		justifyContent: 'center',
 		}

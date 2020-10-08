@@ -14,10 +14,11 @@ const Faculties = () => {
 	];
 	return(
 		<View style = {styles.viewStyle}>
+			<Text style = {{fontSize:25,marginBottom:15,}}>List of Faculties</Text>
 			<FlatList
 				data = {F_list}
 				renderItem = {function ({ item }){
-					return (<Text style = {{fontSize:18}}>{item.key}. {item.name} </Text>)
+					return (<Text style = {styles.textStyle}>{item.key}. {item.name} </Text>)
 				}}
 			/>
 		</View>
@@ -27,9 +28,16 @@ const Faculties = () => {
 const styles = StyleSheet.create(
 	{
 		viewStyle: {
-			backgroundColor: "#fff",
+			backgroundColor: "#efeeee",
 			borderWidth: 20,
-			borderColor: "#fff",
+			borderColor: "#efeeee",
+			height: 660
+		},
+		textStyle: {
+			fontSize:18,
+			marginBottom:10,
+			marginLeft:10,
+			color: "#344e5c"
 		}
 	}
 );

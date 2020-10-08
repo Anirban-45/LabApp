@@ -1,36 +1,48 @@
 import React from 'react';
-import { StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View, FlatList} from 'react-native';
 
-const courses = () => {
-	const Course1 = "SWE 4601"
-	const Course2 = "CSE 4617"
-	const Course3 = "SWE 4637"
-	const Course4 = "CSE 4621"
-	const Course5 = "Math 4643"
-	const Course6 = "SWE 4603"
+const coursesem6 = () => {
+	const C_list = [
+		{name: "SWE 4601", key: '1'},
+		{name: "CSE 4617", key: '2'},
+		{name: "SWE 4637", key: '3'},
+		{name: "CSE 4621", key: '4'},
+		{name: "Math 4643", key: '5'},
+		{name: "SWE 4603", key: '6'},
+	]
 
 	return(
 		<View>
-			<Text style = {styles.c_container}>
-				1. {Course1}
-				2. {Course2}
-				3. {Course3}
-				4. {Course4}
-				5. {Course5}
-				6. {Course6}
-			</Text>
+			<FlatList
+				style = {styles.listStyle}
+				data = {C_list}
+				renderItem = {function ({ item }){
+					return (<Text style = {styles.t_container}>{item.key}. {item.name} </Text>)
+				}}
+			/>
 		</View>
 	)
 }
 
 const styles = StyleSheet.create(
 	{
-		c_container: {
-			backgroundColor: '#fff',
-			fontSize: 30,
-			color: "black"
+		t_container: {
+			flex: 1,
+			alignItems: "center",
+			justifyContent: "center",
+			color: "white",
+			fontSize:18,
+			marginVertical: 2,
+			marginHorizontal: 4,
+			borderColor: "#efeeee",
+			backgroundColor: "#510a32",
+			padding: 20,
+			paddingLeft: 118
 		},
+		listStyle: {
+
+		}
 	}
 );
 
-export default courses;
+export default coursesem6;
