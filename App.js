@@ -5,7 +5,10 @@ import HomeScreen from "./src/Screens/HomeScreen";
 import profile from "./src/Screens/profile";
 import semesters from "./src/Screens/Semesters";
 import Faculties from "./src/Screens/FacultyList"
-import coursesem6 from "./src/Screens/CourseList"
+import coursesem3 from "./src/Screens/CourseListsem3"
+import coursesem4 from "./src/Screens/CourseListsem4"
+import coursesem5 from "./src/Screens/CourseListsem5"
+import coursesem6 from "./src/Screens/CourseListsem6"
 
 
 const Stack = createStackNavigator();
@@ -18,6 +21,9 @@ function App() {
                 <Stack.Screen name = "Semesters" component={semesters}/>
                 <Stack.Screen name = "Faculties" component={Faculties}/>
                 <Stack.Screen name = "Profile" component={profile}/>
+                <Stack.Screen name = "Semester 3" component={coursesem3}/>
+                <Stack.Screen name = "Semester 4" component={coursesem4}/>
+                <Stack.Screen name = "Semester 5" component={coursesem5}/>
                 <Stack.Screen name = "Semester 6" component={coursesem6}/>
 
             </Stack.Navigator>
