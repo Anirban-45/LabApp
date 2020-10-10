@@ -17,6 +17,7 @@ const profile = () => {
 				<Text style = {styles.infotext}>Room no: {Room}</Text>
 				<Text style = {styles.infotext}>E-mail: {Email}</Text>
 			</View>
+
 		</View>
 	)
 }
@@ -26,7 +27,7 @@ const styles = StyleSheet.create(
 		ImageBody: {
 			alignItems: 'center',
 			justifyContent: 'center',
-			backgroundColor: "cadetblue"
+			backgroundColor: 'cadetblue';
 		},
 		infotext: {
 			fontSize:16,

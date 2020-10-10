@@ -6,10 +6,31 @@ const semesters = (props) => {
 	return(
 		<View style = {styles.viewStyle}>
 			<Text style = {styles.s_container}> List of Semesters</Text>
-			<View style = {{margin:5}}><Button title= "3rd semester" color= "maroon"/></View>
-			<View style = {{margin:5}}><Button title= "4th semester" color= "maroon"/></View>
+			<View style = {{margin:5}}>
+				<Button title= "3rd semester" color= "maroon"
+				onPress = {
+					function (){
+						props.navigation.navigate("Semester 3");
+					}
+				}/>
+			</View>
+			<View style = {{margin:5}}>
+				<Button title= "4th semester" color= "maroon"
+				onPress = {
+					function (){
+						props.navigation.navigate("Semester 4");
+					}
+				}/>
+			</View>
 
-			<View style = {{margin:5}}><Button title= "5th semester" color= "maroon"/></View>
+			<View style = {{margin:5}}>
+				<Button title= "5th semester" color= "maroon"
+				onPress = {
+					function (){
+						props.navigation.navigate("Semester 5");
+					}
+				}/>
+			</View>
 			<View style = {{margin:5}}>
 				<Button title= "6th semester" color= "maroon"
 				onPress = {

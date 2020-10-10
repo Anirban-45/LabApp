@@ -12,7 +12,8 @@ const coursesem6 = () => {
 	]
 
 	return(
-		<View>
+		<View style = {styles.viewStyle}>
+			<Text style = {{fontSize: 25, paddingLeft: 40, padding: 20, color: "#3f474c" }}>6th semester All courses</Text>
 			<FlatList
 				style = {styles.listStyle}
 				data = {C_list}
@@ -23,6 +24,7 @@ const coursesem6 = () => {
 		</View>
 	)
 }
+
 
 const styles = StyleSheet.create(
 	{
@@ -39,8 +41,8 @@ const styles = StyleSheet.create(
 			padding: 20,
 			paddingLeft: 118
 		},
-		listStyle: {
-
+		viewStyle: {
+			backgroundColor: "#efeeee"
 		}
 	}
 );
