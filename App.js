@@ -10,25 +10,22 @@ import coursesem4 from "./src/Screens/CourseListsem4"
 import coursesem5 from "./src/Screens/CourseListsem5"
 import coursesem6 from "./src/Screens/CourseListsem6"
 
-
 const Stack = createStackNavigator();
 
-function App() {
-    return (
-        <NavigationContainer>
-            <Stack.Navigator initialRouteName = "Home">
-                <Stack.Screen name = "Home" component={HomeScreen}/>
-                <Stack.Screen name = "Semesters" component={semesters}/>
-                <Stack.Screen name = "Faculties" component={Faculties}/>
-                <Stack.Screen name = "Profile" component={profile}/>
-                <Stack.Screen name = "Semester 3" component={coursesem3}/>
-                <Stack.Screen name = "Semester 4" component={coursesem4}/>
-                <Stack.Screen name = "Semester 5" component={coursesem5}/>
-                <Stack.Screen name = "Semester 6" component={coursesem6}/>
+function App () {
+	return (<NavigationContainer>
+		<Stack.Navigator initialRouteName="Home">
+			<Stack.Screen name="Home" component={HomeScreen}/>
+			<Stack.Screen name="Semesters" component={semesters}/>
+			<Stack.Screen name="Faculties" component={Faculties} />
+			<Stack.Screen name="Profile" component={profile} />
+			<Stack.Screen name="Semester 3" component={coursesem3}/>
+			<Stack.Screen name="Semester 4" component={coursesem4}/>
+			<Stack.Screen name="Semester 5" component={coursesem5} />
+			<Stack.Screen name="Semester 6" component={coursesem6}/>
 
-            </Stack.Navigator>
-        </NavigationContainer>
-    );
+		</Stack.Navigator>
+	</NavigationContainer>);
 }
 
 export default App;

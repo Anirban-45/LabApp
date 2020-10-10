@@ -2,12 +2,9 @@ import React from 'react';
 import { StyleSheet, Text, View, Button, Image, TouchableOpacity } from 'react-native';
 
 
-
 const HomeScreen = (props) =>{
 	return(
 		<View style = {{backgroundColor: "#efeeee"}}>
-
-
 			<View style = {styles.viewStyle}>
 				<Text style = {{fontSize:28}}>Welcome!!</Text>
 				<Image
@@ -66,7 +63,7 @@ const styles = StyleSheet.create(
 		viewStyle: {
 			margin:10,
 			alignItems: 'center',
-    		justifyContent: 'center',
+			justifyContent: 'center',
 		}
 	}
 );
